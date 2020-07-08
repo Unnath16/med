@@ -1,0 +1,26 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="register.css">
+<script src="Myfunctions.js"></script>
+</head>
+<body>
+  <div class="form" style="margin-top: 150px;">
+      <form name="registerform" method="POST" action="Doctor.jsp" class="login-form">
+
+         <input type="text" name="Name" placeholder="Name" pattern="[a-zA-Z]+" maxlength="20" required/>
+          <input type="email" name="Email" placeholder="Email" maxlength="20" required/>
+          <input type="tel" name="CNum" title="10 Digits Numbers"  placeholder="Contact Number" pattern="\d{10}$" maxlength="10" required/>
+          <input type="text" name="HName" placeholder="Hospital Name" pattern="[a-zA-Z]+" maxlength="20" required/>
+          <input type="text" name="Address" placeholder="Address" pattern="[a-z A-Z]+" maxlength="40" required/>
+          <input type="text" name="LicNo" title="10 Digits Numbers"  placeholder="License Number" pattern="\d{10}$" maxlength="10" required/>
+          <input type="password" name="Pass1" placeholder="Password" maxlength="20" required/>
+	  <input type="password" name="Pass2" placeholder=" Confirm Password" maxlength="20" required/>
+
+	<button onsubmit="validateForm1()">Sign Up</button>
+	
+        <p class="message">Already Registered? <a href="Home.html">Login</a></p>
+       </form>
+  </div>
+</body>
+</html>
+

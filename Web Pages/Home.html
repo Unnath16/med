@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+<div class="login-page">
+  <div class="form">
+    <form name="loginform" class="login-form">
+      <input type="text" placeholder="username" name="Uname" maxlength="20"/>
+      <input type="password" placeholder="password" name="Pass1" maxlength="20"/>
+      <button onclick="validateForm()">login</button>
+      <p class="message">Not registered? <a href="register.html">Create an account</a></p>
+    </form>
+  </div>
+<script>
+function validateForm() {
+var x = document.forms["loginform"]["Uname"].value;
+var y = document.forms["loginform"]["Pass1"].value;
+
+  if (x == "" || y == "") {
+    alert("All must be filled out");
+    return false;
+  }
+
+}
+
+</script>
+
+</body>
+</html>

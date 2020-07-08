@@ -1,0 +1,53 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+  <div class="form" style="margin-top: 150px;">
+    <form name="registerform" class="login-form">
+
+<select id="signupDD">
+<option>Doctor</option>
+<option>Supplier</option>
+<option>Patient</option>
+</select>
+      <input type="text" name="Uname" placeholder="Username" maxlength="20"/>
+	<input type="text" name="CNum" title="Only Numbers" placeholder="Contact Number" maxlength="10"/>
+       <input type="password" name="Pass1" placeholder="Password" maxlength="20" />
+	<input type="password" name="Pass2" placeholder=" Confirm Password" maxlength="20"/>
+	 <button onclick="validateForm()">Signup</button>
+<p class="message">Already Registered? <a href="Home.html">Login</a></p>
+    </form>
+  </div>
+
+<script>
+function validateForm() {
+var x = document.forms["registerform"]["Uname"].value;
+var y = document.forms["registerform"]["CNum"].value;
+var z = document.forms["registerform"]["Pass1"].value;
+var z1 = document.forms["registerform"]["Pass2"].value;
+var eID = document.getElementById("signupDD"); 
+var op = eID.options[eID.selectedIndex].text;
+
+  if (x == "" || y == ""|| z == "" || z1 == "") 
+  {
+    alert("All must be filled out");
+    return false;
+  }
+else if(z!=z1)
+{
+   alert("Passwords Does Not Match");
+}
+else if(op=="Doctor"){
+
+window.location.href="Home.html";
+alert("Doctor");
+}
+
+}
+
+</script>
+
+</body>
+</html>
+

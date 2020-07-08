@@ -1,0 +1,24 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="register.css">
+<script src="Myfunctions.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+  <div class="form" style="margin-top: 150px;">
+      <form name="registerform" onsubmit="return validateForm1()" method="POST" action="DataBase.jsp"  class="login-form">
+
+          <input type="text" name="Uname" placeholder="Username" pattern="[a-zA-Z\s]+" maxlength="20" required/>
+          <input type="text" name="Uaddress" placeholder="Address" pattern="[a-zA-Z\s]+" maxlength="20" required/>
+          <input type="email" name="Email" placeholder="Email" maxlength="20" required/>
+          <input type="tel" name="CNum" title="10 Digits Numbers"  placeholder="Contact Number" pattern="\d{10}$" maxlength="10" required/>
+        <input type="password" name="Pass1" placeholder="Password" maxlength="20" required/>
+	<input type="password" name="Pass2" placeholder=" Confirm Password" maxlength="20" required/>
+	<button>Sign Up</button>
+	
+        <p class="message" >Already Registered? <a onclick="" href="Home.html">Login</a></p>
+       </form>
+  </div>
+</body>
+</html>
+

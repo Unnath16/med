@@ -1,0 +1,105 @@
+
+<SCRIPT language="javascript">
+		function addRow(tableID) {
+
+			var table = document.getElementById(tableID);
+
+			var rowCount = table.rows.length;
+			var row = table.insertRow(rowCount);
+
+			var cell1 = row.insertCell(0);
+			var element1 = document.createElement("input");
+			element1.type = "checkbox";
+			element1.name="chkbox[]";
+			cell1.appendChild(element1);
+
+			var cell2 = row.insertCell(1);
+			cell2.innerHTML = rowCount ;
+
+			var cell3 = row.insertCell(2);
+			var element2 = document.createElement("input");
+			element2.type = "text";
+			element2.name = "txtbox[]";
+			cell3.appendChild(element2);
+			
+			var cell4 = row.insertCell(3);
+			var element3 = document.createElement("input");
+			element3.type = "NUMBER";
+			element3.name = "txtbox[]";
+			cell4.appendChild(element3);
+			
+			var cell5 = row.insertCell(4);
+			var element4 = document.createElement("input");
+			element4.type = "number";
+			element4.name = "txtbox[]";
+			cell5.appendChild(element4);
+
+
+
+
+		}
+
+		function deleteRow(tableID) {
+			try {
+			var table = document.getElementById(tableID);
+			var rowCount = table.rows.length;
+
+			for(var i=0; i<rowCount; i++) {
+				var row = table.rows[i];
+				var chkbox = row.cells[0].childNodes[0];
+				if(null != chkbox && true == chkbox.checked) {
+					table.deleteRow(i);
+					rowCount--;
+					i--;
+				}
+
+
+			}
+			}catch(e) {
+				alert(e);
+			}
+		}
+
+	</SCRIPT>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="supplier.css">
+
+</HEAD>
+<BODY>
+
+<div class="sidebar">
+  <a href="supplierhome.html"><i class="fa fa-fw fa-home"></i> Home</a>
+<a href="suppproduct.html"><i class="fa fa-plus-square	"></i> Products</a>
+  <a href="#services"><i class="fa fa-fw fa-user"></i> Profile</a>
+  <a href="#clients"><i class="fa fa-cart-plus"></i> Orders</a>
+  <a href="#contact"><i class="	fa fa-clock-o"></i> History</a>
+</div>
+<div class="main">
+
+	<INPUT type="button" value="Add Row" onclick="addRow('dataTable')" />
+
+	<INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
+
+	<TABLE id="dataTable" width="350px" border="1">
+		<TC>
+<td>Check</td>
+<td>Product Id</td>
+<td>Product</td>
+<td>Quatity</td>
+<td>Price</td>
+
+</tc>
+
+<TR>
+			
+			<TD><INPUT type="checkbox" name="chk"/></TD>
+			<TD> 1 </TD>
+			<TD> <INPUT type="text" /> </TD>
+			<TD> <INPUT type="number" /> </TD>
+			<TD> <INPUT type="number" /> </TD>
+		</TR>
+	</TABLE>
+</div>
+</BODY>
+

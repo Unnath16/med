@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="register.css">
+<script src="Myfunctions.js"></script>
+</head>
+<body>
+  <div class="form" style="margin-top: 150px;">
+      <form name="registerform" method="POST" action="Supplier.jsp" class="login-form">
+
+         <input type="text" name="Name" placeholder="Name" pattern="[a-z]+" maxlength="20" required/>
+           <input type="text" name="Price" placeholder="Price" pattern="\d{10}$" maxlength="20" required/>
+          <input type="text" name="Quantity" placeholder="Quantity" pattern="[a-z]+" maxlength="40" required/>
+          <input type="text" name="Description" title="Description"  placeholder="Description" pattern="[a-z]+" maxlength="10" required/>
+          
+	<button onsubmit="validateForm1()">Add Products</button>
+	
+    
+       </form>
+  </div>
+</body>
+</html>
+

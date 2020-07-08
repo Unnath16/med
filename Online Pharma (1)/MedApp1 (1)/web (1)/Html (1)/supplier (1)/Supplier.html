@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="register.css">
+<script src="Myfunctions.js"></script>
+</head>
+<body>
+  <div class="form" style="margin-top: 150px;">
+      <form name="registerform" onsubmit="return validateForm1()" method="POST" action="Supplier.jsp"  class="login-form">
+
+         <input type="text" name="Name" placeholder="Name" pattern="[a-zA-Z]+" maxlength="20" required/>
+          <input type="email" name="Email" placeholder="Email" maxlength="20" required/>
+          <input type="tel" name="CNum" title="10 Digits Numbers"  placeholder="Contact Number" pattern="\d{10}$" maxlength="10" required/>
+          <input type="text" name="MName" placeholder="Medical Name" pattern="[a-zA-Z\s]+" maxlength="20" required/>
+          <input type="text" name="Address" placeholder="Address" pattern="[a-zA-Z\s]+" maxlength="40" required/>
+          <input type="text" name="LicNo" title="10 Digits Numbers"  placeholder="License Number" pattern="\d{10}$" maxlength="10" required/>
+          <input type="password" name="Pass1" placeholder="Password" maxlength="20" required/>
+	  <input type="password" name="Pass2" placeholder=" Confirm Password" maxlength="20" required/>
+
+	<button>Sign Up</button>
+	
+        <p class="message">Already Registered? <a href="suppHome.html">Login</a></p>
+       </form>
+  </div>
+</body>
+</html>
+
